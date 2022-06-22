@@ -78,7 +78,6 @@ public class SeekRoomFrame extends JFrame implements ActionListener {
         for (int i = 0; i < b.length; i++) {
             if (e.getSource() == b[i]) {
                 r.loadRoomTable();
-                //System.out.println(limit);
                 if (r.getRoomList().get(i).getRoomType().equals("standard") && limit < 4 &&
                         r.getRoomList().get(i).getRoomStatus() == 0) {
                     ++limit;
@@ -87,7 +86,6 @@ public class SeekRoomFrame extends JFrame implements ActionListener {
                     b[i].setBackground(Color.red);
                     cbr.chosenRoom(i + 1);
                     r.bookRoomAt(i + 1);
-                    // r.loadRoomTable();
                     break;
                 } else if (r.getRoomList().get(i).getRoomType().equals("dlx") && limit < 4 &&
                         r.getRoomList().get(i).getRoomStatus() == 0) {
@@ -97,7 +95,6 @@ public class SeekRoomFrame extends JFrame implements ActionListener {
                     b[i].setBackground(Color.red);
                     cbr.chosenRoom(i + 1);
                     r.bookRoomAt(i + 1);
-                    // r.loadRoomTable();
                     break;
                 } else if (r.getRoomList().get(i).getRoomStatus() == 1) {
                     JOptionPane.showMessageDialog(null, "already booked");
@@ -128,7 +125,6 @@ public class SeekRoomFrame extends JFrame implements ActionListener {
                 nor = 0;
                 limit = 0;
                 c = 0;
-                //cbr.loadCbR();
                 for (int i = 0; i < cbr.roomsOfCurrentCus().size(); i++) {
                     r.freeRoomAt(cbr.roomsOfCurrentCus().get(i));
                 }
