@@ -69,7 +69,7 @@ public class Customer {
     public void loadCustomerTable() {
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "-----";
         cleanList();
         try {
             Connection con = DriverManager.getConnection(url, uname, password);
@@ -103,7 +103,7 @@ public class Customer {
     public void addCustomer(String id, String fname, String lname, String pnum) {
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "----";
 
         String query = "insert into customers values ('" + id + "','" + fname + "','" + lname + "','" + pnum + "')";
         try {
@@ -143,7 +143,7 @@ public class Customer {
     public void dropCustomer() {
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "-----";
         try {
             Connection con = DriverManager.getConnection(url, uname, password);
             Statement statement = con.createStatement();

@@ -76,7 +76,7 @@ public class Receptionist {
     public void loadRecLoginTable() {
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "----";
         try {
             Connection con = DriverManager.getConnection(url, uname, password);
             Statement statement = con.createStatement();
@@ -106,7 +106,7 @@ public class Receptionist {
     public void loadPhoneList() {
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "-----";
         try {
             Connection con = DriverManager.getConnection(url, uname, password);
             Statement statement = con.createStatement();
@@ -184,7 +184,7 @@ public class Receptionist {
     public void signupReceptionist(String fname, String lname, String phone, String psw) {
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "------";
         try {
             Connection con = DriverManager.getConnection(url, uname, password);
             Statement statement = con.createStatement();

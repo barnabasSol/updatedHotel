@@ -34,7 +34,7 @@ public class CbR {
     public void loadCbR() {
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "----";
         cleanList();
         try {
             Connection con = DriverManager.getConnection(url, uname, password);
@@ -58,7 +58,7 @@ public class CbR {
     public void chosenRoom(int roomN) {
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "----";
         try {
             Connection con = DriverManager.getConnection(url, uname, password);
             Statement statement = con.createStatement();
@@ -76,7 +76,7 @@ public class CbR {
     public void cancelCustomer(String id){
     String url = "jdbc:mysql://localhost:3306/hotel";
     String uname = "root";
-    String password = "VenuS_321";
+    String password = "----";
     try {
         Connection con = DriverManager.getConnection(url, uname, password);
         Statement statement = con.createStatement();
@@ -91,7 +91,7 @@ public ArrayList<Integer> roomsOfCurrentCus(){
     ArrayList<Integer> curRooms = new ArrayList<>();
     String url = "jdbc:mysql://localhost:3306/hotel";
     String uname = "root";
-    String password = "VenuS_321";
+    String password = "-----";
     try {
         Connection con = DriverManager.getConnection(url, uname, password);
         Statement statement = con.createStatement();
@@ -112,7 +112,7 @@ public ArrayList<Integer> roomsOfCurrentCus(){
          theRooms = new ArrayList<>();
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "----";
         try {
             Connection con = DriverManager.getConnection(url, uname, password);
             Statement statement = con.createStatement();

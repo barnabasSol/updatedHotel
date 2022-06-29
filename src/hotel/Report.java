@@ -68,7 +68,7 @@ public class Report {
                           String checkOutDate, String currentReceptionist) {
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "-----";
 
         String query = "insert into report(customer_id, number_of_rooms, paid_amount, checkout_date, booker_id) " +
                 "values(" + "\"" + cusID + "\", " + amountOfRooms + ", " + paidAmount + ", " +
@@ -86,7 +86,7 @@ public class Report {
     public void deleteReportOfCurC() {
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "-----";
         try {
             Connection con = DriverManager.getConnection(url, uname, password);
             Statement statement = con.createStatement();

@@ -9,6 +9,7 @@ public class SeekRoomFrame extends JFrame implements ActionListener {
     Room r = new Room();
     int nor = 0;
     int c = 0;
+    int toggle = 0;
     boolean confirmed = false;
     int limit = 1;
     JButton cancelButton;
@@ -82,10 +83,17 @@ public class SeekRoomFrame extends JFrame implements ActionListener {
                         r.getRoomList().get(i).getRoomStatus() == 0) {
                     ++limit;
                     ++nor;
-                    Report.roomPrice += 300;
-                    b[i].setBackground(Color.red);
-                    cbr.chosenRoom(i + 1);
-                    r.bookRoomAt(i + 1);
+                    if (toggle > 0){
+                        b[i].setBackground(Color.green);
+                        toggle = 0;
+                    }
+                    else {
+                        ++toggle;
+                        Report.roomPrice += 300;
+                        b[i].setBackground(Color.red);
+                        cbr.chosenRoom(i + 1);
+                        r.bookRoomAt(i + 1);
+                    }
                     break;
                 } else if (r.getRoomList().get(i).getRoomType().equals("dlx") && limit < 4 &&
                         r.getRoomList().get(i).getRoomStatus() == 0) {

@@ -38,7 +38,7 @@ public class Manager {
     public void loadMgrLoginTable() {
         String url = "jdbc:mysql://localhost:3306/hotel";
         String uname = "root";
-        String password = "VenuS_321";
+        String password = "----";
         try {
             Connection con = DriverManager.getConnection(url, uname, password);
             Statement statement = con.createStatement();
